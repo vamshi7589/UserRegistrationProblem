@@ -37,3 +37,15 @@ else
         echo "Invalid email"
 fi
 }
+function getMobileNumber(){
+read -p "Enter Mobile number :" number
+numberPattern="^[0-9]{2,3}[[:space:]][0-9]{10}$"
+#numberPattern="^[0]?[0-9]{10}$"
+
+if [[ $number =~ $numberPattern ]]
+then
+        echo "valid Number"
+else
+        echo "Invalid Number"
+fi
+}
