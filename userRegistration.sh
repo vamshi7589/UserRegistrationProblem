@@ -49,3 +49,15 @@ else
         echo "Invalid Number"
 fi
 }
+function getPassword(){
+read -p "choose Password :" password
+passwordPattern="[0-9a-zA-Z]{8,}$"
+
+
+if [[ $password =~ $passwordPattern ]]
+then
+        echo "valid password"
+else
+        echo "Invalid password"
+fi
+}
