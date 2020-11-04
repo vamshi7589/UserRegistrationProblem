@@ -51,13 +51,17 @@ fi
 }
 function getPassword(){
 read -p "choose Password :" password
-passwordPattern="[0-9a-zA-Z]{8,}$"
+pass_Pattern1="^.{8,}"
+pass_Pattern2="^[a-zA-Z0-9]*[!@#$%^&*.]{1}[a-zA-Z0-9]*$"
 
 
-if [[ $password =~ $passwordPattern ]]
+if [[ $password =~ $password_Pattern1 ]]
 then
-        echo "valid password"
+if [[ $password =~ $password_Pattern2 ]]
+then
+echo "valid password"
 else
         echo "Invalid password"
+fi
 fi
 }
