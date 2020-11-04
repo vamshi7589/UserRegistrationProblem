@@ -10,3 +10,18 @@ then
 else
         echo "First Name is invalid"
 fi
+}
+
+function getLastName(){
+
+read -p "Enter Last name :" lname
+lnamePattern="^[A-Z][a-zA-Z]{2,}$"
+
+if [[ $lname =~ $lnamePattern ]]
+then
+        echo "last Name is valid"
+else
+        echo "last Name is invalid"
+fi
+
+}
